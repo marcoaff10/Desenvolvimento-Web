@@ -1,0 +1,532 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,body{
+    height: 100%;
+    background: #d1cec2;
+}
+
+body{overflow-x: hidden;}
+
+.box-login{
+    max-width: 600px;
+    width: 95%;
+    padding: 40px 2%;
+    background-color: #EBE7D9;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-shadow: 10px 8px 4px 1px rgba(0, 0, 0,0.7);
+    transform: translate(-50%,-50%);
+}
+
+.box-login h2{
+    font-size: 26px;
+    margin-bottom: 8px;
+    font-weight: normal;
+    text-align: center;
+    color: #1c1c1c;
+}
+
+.box-login input[type=text],
+.box-login input[type=password]{
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    font-size: 17px;
+    border-radius: 15px;
+    color: #1c1c1c;
+    background-color: #EBE7D9;
+    border: 2px solid #333;
+    padding-left: 15px;
+}
+
+.box-login input[type=text]:focus{outline: 0;}
+
+.box-login input[type=password]:focus{outline: 0;}
+
+.box-login input[type=submit]{
+    width: 20%;
+    height: 30px;
+    margin-top: 5px;
+    font-size: 17px;
+    border-radius: 10px;
+    color: #EBE7D9;
+    cursor: pointer;
+    background-color: #F55139;
+    border: 1px solid #b03d2c;
+}
+
+.box-login input[type=submit]:focus{outline: 0;}
+.box-login input[type=submit]:hover{background-color: #b03d2c;}
+
+.logo-painel{
+    width: 100%;
+    height: 60px;
+    padding: 12px 2%;
+    text-align: center;
+    background-color: #333;
+}
+
+.logo-painel img{
+    width: 200px;
+    height: 33px;
+    
+}
+
+.erro-box{
+    width: 100%;
+    padding: 6px 2%;
+    text-align: center;
+    font-size: 16px;
+    color: #EBE7D9;
+    background-color: #F55139;
+}
+
+/*pagina main*/
+.clear{clear:both;}
+
+    .center{
+        max-width: 3840px;
+        margin: 0 auto;
+        padding: 0 2%;
+    }
+
+    header{
+        position: relative;
+        left: 250px;
+        text-align: center;
+        padding: 10px 0;
+        background: #333; 
+        width: calc(100% - 250px);
+    }
+
+    .logo-main{
+        display: inline-block;
+        width: 200px;
+        height: 33px;
+    }
+
+    .logo-main img{
+        width: 100%;
+        height: 33px;
+    }
+
+    .loggout{
+        float: right;
+    }
+
+    .loggout a{
+        padding: 0 20px;
+        position: relative;
+        top: 4px;
+        text-decoration: none;
+        color: #EBE7D9;
+        font-size: 26px;
+    }
+
+    .loggout span{
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+    div.menu{
+        overflow-x:hidden;
+        overflow-y: auto;
+        height: 100%;
+        padding:10px 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: #333;
+        float: left;
+        width: 250px;
+    }
+
+    .menu-btn{
+        float: left;
+        cursor: pointer;
+        font-size: 28px;
+        color: white;
+    }
+
+    .box-usuarios{
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        border-top: 2px solid #EBE7D9;
+        border-bottom: 2px solid #EBE7D9;
+    }
+
+    .info-usuario{
+        position: relative;
+        top: 15px;
+    }
+
+    .info-usuario h3{
+        color: #EBE7D9;
+        font-size: 17px;
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    .info-usuario p{
+        display: inline-block;
+        color: #F55139;
+        font-weight: bold;
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    div.box-usuario{
+        padding: 8px;
+        text-align: center;
+    }
+
+    .avatar-usuario{
+        text-align: left;
+        display: inline-block;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 3px solid #EBE7D9;
+    }
+
+    .avatar-usuario i{
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform:translate(-50%,-50%);
+        -ms-transform:translate(-50%,-50%);
+        font-size: 60px;
+        color: #EBE7D9;
+    }
+
+    .imagem-usuario{
+        display: inline-block;
+        width: 130px;
+        height: 130px;
+        position: relative;
+        border-radius: 50%;
+        border: 3px solid #2F3D42;
+    }
+    
+    .imagem-usuario img{
+        position: absolute;
+        left: 0;
+        top: -2px;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    
+    .nome-usuario{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nome-usuario p{
+        color: #F55139;
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+    .itens-menu{
+        margin-top: 30px;
+    }
+    
+    .itens-menu h2{
+        text-align: left;
+        font-weight: bold;
+        font-size: 22px;
+        background: #1c1c1c;
+        color: #EBE7D9;
+        padding:8px;
+    }
+    
+    .itens-menu a{
+        display: block;
+        padding: 8px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #EBE7D9;
+        border-bottom: 2px solid #1c1c1c;
+    }
+
+    .itens-menu a > i{
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .itens-menu a:hover{
+        font-size: 19px;
+        background-color: #b03d2c;
+    }
+
+/*conteudo do painel*/
+    .content{
+        width: calc(100% - 250px);
+        position: relative;
+        left: 250px;
+        padding: 2%;
+    }
+
+    .box-content{
+        padding: 40px 2%;
+        margin-bottom: 60px;
+        background-color: #EBE7D9;
+    }
+
+    .box-content > h2{
+        font-size: 30px;
+    }
+
+    .box-content > h2 i{
+        color: #F55139;
+        margin-right: 15px;
+    }
+
+    .box-metrica-single{
+        margin-top: 10px;
+        padding: 15px 2%;
+        width: 33.3%;
+        height: 120px;
+        border-right: 8px solid #EBE7D9;
+        float: left;
+    }
+
+    .box-metrica-wraper h2{
+        font-size: 26px;
+        color: #1c1c1c;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .box-metrica-wraper p{
+        font-size: 24px;
+        color: #1c1c1c;
+        font-weight: bold;
+    }
+
+    .form-group{
+        width: 33.3%;
+    }
+
+    .box-content form{
+        margin: 30px 0;
+    }
+
+    .box-content form label{
+        font-size: 22px;
+        font-weight: bold;
+        color: #1c1c1c;
+        display: block;
+    }
+
+    .form-group input[type=text],
+    .form-group input[type=password]{
+        width: 600px;
+        height: 35px;
+        padding-left: 15px;
+        margin: 10px 15px;
+        font-size: 17px;
+        border-radius: 15px;
+        border: 1px solid #1c1c1c;
+    }
+
+    .form-group input[type=file]{
+        width: 400px;
+        height: 35px;
+        margin: 10px 15px;
+        font-size: 17px;
+    }
+
+    .form-group input[type=submit]{
+        width: 100px;
+        height: 30px;
+        margin: 10px 15px;
+        font-size: 17px;
+        border-radius: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #EBE7D9;
+        border: 1px solid #b03d2c;
+        background-color: #F55139;
+    }
+
+    .form-group select{
+        width: 600px;
+        height: 35px;
+        padding-left: 15px;
+        margin: 10px 15px;
+        font-size: 17px;
+        border-radius: 15px;
+        border: 1px solid #1c1c1c;
+    }
+
+    .form-group textarea{
+        width: 600px;
+        height: 100px;
+        padding: 5px 15px;
+        margin: 10px 15px;
+        font-size: 17px;
+        resize: vertical;
+        border-radius: 15px;
+        border: 1px solid #1c1c1c;
+    }
+
+    .form-group input[type=text]:focus{outline: 0;}
+    .form-group input[type=password]:focus{outline: 0;}
+    .form-group input[type=file]:focus{outline: 0;}
+    .form-group input[type=submit]:focus{outline: 0;}
+    .form-group select:focus{outline: 0;}
+    .form-group textarea:focus{outline: 0;}
+
+    .box-alert{
+        width: 300px;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 33px;
+        margin-left: 200px;
+        text-align: center;
+    }
+
+    .sucesso{
+        color: #66bb6a;
+        background-color: #c8e6c9;
+    }
+
+    .erro{
+        color: #b71c1c;
+        background-color: #ef9a9a ;
+    }
+
+    .menu-active{
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #F55139;
+    }
+/**/
+
+
+/*table responsive*/
+    .table-responsive{
+        max-width: 1280px;
+        margin: 40px auto;
+        padding: 0 2%;
+    }
+
+    .col{
+        float: left;
+        width: 50%;
+        text-align: center;
+    }
+
+    .table-responsive .row{
+        font-size: 22px;
+        font-weight: bold;
+        color: #1c1c1c;
+        border-bottom: 1px solid #1c1c1c;
+        padding: 8px 0;
+    }
+
+    .table-responsive .row2{
+        font-size: 20px;
+        font-weight: normal;
+        color: #1c1c1c;
+        padding: 8px 0;
+    }
+
+    .form-group-login{
+        float: left;
+    }
+
+    .form-group-login label{
+        font-size: 17px;
+        color: #1c1c1c;
+        font-weight: lighter;
+    }
+
+    .right{
+        float: right;
+        width: 25%;
+        padding-top: 7px;
+    }
+
+    .left{
+        float: left;
+        width: 75%;
+    }
+/**/
+
+/*tabelas*/
+    table{
+        width: 100%;
+        margin-top: 60px;
+        text-align: center;
+        border-collapse: collapse;
+        border: 1px solid #1c1c1c;
+    }
+
+    table tr:nth-of-type(1){
+        background-color: #333;
+        color: #F55139;
+    }
+
+    table tr{
+        background-color: #d1cec2;
+        border-bottom: 1px solid #1c1c1c;
+    }
+
+    table tr td{
+        font-size: 17px;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    .btn{
+        text-decoration: none;
+    }
+
+    .edit{color: #32a852;}
+    .delete{color: #b03d2c;}
+    .order{color: #4287f5;font-weight: bold; font-size: 22px;}
+/**/
+@media screen and (max-width: 977px){
+
+    .box-metricas{text-align: center;}
+
+    .box-metrica-single{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .logo-main{display: none;}
+
+    .box-content h2{text-align: center;}
+
+    .box-content form{text-align: center;}
+}
+
+    @media screen and (max-width: 768px){
+
+        header{
+            left: 0;
+            width: 100%;
+        }
+
+        .content{
+            width: 100%;
+            left: 0;
+        }
+
+        .menu{
+            display: none;
+        }
+
+    }
